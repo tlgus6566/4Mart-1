@@ -26,8 +26,10 @@ def getHomeplusStoreInfo(result):
     time.sleep(0.3)
     
     # 서울특별시
-    for i in range(1,5):
+    for i in range(1,20):
         wd.find_element(By.XPATH,'//*[@id="ctl00_ContentPlaceHolder1_Region_Code"]/option[2]').click()
+        time.sleep(0.3)
+        wd.find_element(By.XPATH,'//*[@id="ctl00_ContentPlaceHolder1_Region_Code"]/option[1]').click()
         time.sleep(0.3)
         wd.find_element(By.XPATH,f'//*[@id="content"]/div/div/div/ul/li[{i}]/div[1]/h3/span[2]/a').click()
         time.sleep(0.3)
